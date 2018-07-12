@@ -62,7 +62,7 @@ class MLP():
         history = self.model_.fit(self.__data_.train_x.values, self.__data_.train_y.values, validation_data = (self.__data_.valid_x.values, self.__data_.valid_y.values), \
                         epochs=max_epochs, 
                         batch_size=batch_size, 
-                        callbacks=[k.callbacks.ModelCheckpoint(libPath + '\\src\\results\\weights.{epoch:02d}-{val_loss:.2f}.hdf5',period=5)])
+                        callbacks=[k.callbacks.ModelCheckpoint(libPath + '\\src\\results\\weights.{epoch:02d}.hdf5',period=500)])
         
         return history
 
