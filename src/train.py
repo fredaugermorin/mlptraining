@@ -12,7 +12,7 @@ def train_algo(params):
     dataset = data.DataReader(params['data']['type'])
     
     if params['data']['type'] == 'sql':
-        dataset.fetch_data(con=dbconfig.connections_[params['data']['source']], query=params['data']['detail'])
+        dataset.fetch_data(con=dbconfig.connections_[params['data']['source']](), query=params['data']['detail'])
     elif params['data']['type'] == 'file':
         dataset.fetch_data(file=params['data']['source'])
     
