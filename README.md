@@ -1,6 +1,6 @@
 # mlptraining
 
-Library for training MLP neural networks for american options pricing.
+Library for training MLP neural networks from arbitrary data
 
 ## Getting Started
 
@@ -18,11 +18,11 @@ pip install tensorflow-gpu
 ## Examples
 As of july 2018, the library only provides a way to traing an arbitrary set of data located in:
 ```
-\american_options\data\
+\mlptraining\data\
 ```
 You can modify or create new parameters json files located in 
 ```
-\american_options\src\cfg
+\mlptraining\src\cfg
 ```
 and pass them a options. The default config file is name params.json
 Once your config file is created, you can train the specified model, on the specified dataset by running:
