@@ -1,0 +1,35 @@
+{
+	"data":
+		{
+			"type":"file",
+			"source":"data.pkl",
+			"detail": "select Spot, Strike, Vol, RiskFree, DivYield, TimeToMaturity, Put  FROM MastersThesis.dbo.AmericanOptions_Data where Vol >= 0.01 and Put >= 0",
+			"data_split":[0.6, 0.3, 0.1]
+		},
+	"algo":
+		{
+			"hidden_layers":3,
+			"dim_in":6,
+			"dim_out":1,
+			"n_units":[64, 32, 1],
+			"activation":["relu","relu","linear"]
+		},
+	"train":
+		{
+			"max_epochs":10,
+			"batch_size":2500
+		},
+	"optim":
+		{
+			"lr":0.01,
+			"decay":1e-6,
+			"momentum":0.9,
+			"nesterov":false
+		},
+	"results":
+		{
+			"train_curve":"american_options_training_curve.png",
+			"test_scatter":"american_options_test_scatter.png",
+			"model_path" : "american_options_model_weights.h5"
+		}
+}
