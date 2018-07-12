@@ -14,6 +14,16 @@ before installing, you should make sure you have a working installtion of keras 
 pip install keras
 pip install tensorflow-gpu
 ```
+## Installation
+Once you have keras running on top of tensorflow, you can clone the library in your desired location.
+```
+git clone  https://github.com/fredaugermorin/mlptraining.git
+```
+To verify your installation  was sucessfull,  you can run the following which trains a netwrok on the included dataset for only  10 epochs, so this should not be too long.
+```
+cd %installfolder%\mlptraining\src
+python train.py
+```
 
 ## Examples
 As of july 2018, the library only provides a way to train a possibly deep MLP network on an arbitrary dataset located in:
