@@ -1,0 +1,3 @@
+init file for results folder.
+
+All library results (models weights, training/test plots) will be stored here by default. 
